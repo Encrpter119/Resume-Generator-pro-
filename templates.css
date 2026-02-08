@@ -1,0 +1,381 @@
+/* ==================== RESUME PAGE BASE ==================== */
+.resume-page {
+    font-family: 'Inter', sans-serif;
+    font-size: 10pt;
+    line-height: 1.4;
+    color: #1f2937;
+    background: white;
+    position: relative;
+}
+
+/* Clearfix for floats */
+.resume-page::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ==================== RESUME SECTIONS ==================== */
+.resume-header {
+    padding: 30px 40px;
+    break-inside: avoid;
+}
+
+.resume-name {
+    font-size: 26pt;
+    font-weight: 700;
+    margin-bottom: 4px;
+    letter-spacing: -0.5px;
+}
+
+.resume-title {
+    font-size: 12pt;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.resume-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+    font-size: 9pt;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-icon {
+    font-size: 11pt;
+}
+
+/* Photo */
+.resume-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Sidebar & Main Content */
+.resume-sidebar {
+    float: left;
+    width: 32%;
+    min-height: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.resume-main {
+    float: right;
+    width: 68%;
+    min-height: 100%;
+    padding: 30px 40px;
+    box-sizing: border-box;
+}
+
+/* Section Styling */
+.section {
+    margin-bottom: 20px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.section-heading {
+    font-size: 11pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid currentColor;
+}
+
+.section-content {
+    font-size: 9pt;
+}
+
+/* Experience/Education Items */
+.item {
+    margin-bottom: 14px;
+    break-inside: avoid;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+}
+
+.item-title {
+    font-size: 10pt;
+    font-weight: 700;
+}
+
+.item-date {
+    font-size: 8pt;
+    color: #6b7280;
+    white-space: nowrap;
+}
+
+.item-subtitle {
+    font-size: 9pt;
+    color: #4b5563;
+    margin-bottom: 4px;
+}
+
+.item-description {
+    font-size: 9pt;
+    color: #374151;
+}
+
+/* Skills */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.skill-tag {
+    padding: 4px 10px;
+    font-size: 8pt;
+    font-weight: 500;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Summary */
+.summary-text {
+    font-size: 9pt;
+    line-height: 1.6;
+    color: #374151;
+}
+
+/* Simple List */
+.simple-list {
+    font-size: 9pt;
+    line-height: 1.8;
+}
+
+/* ==================== TEMPLATE 1: PROFESSIONAL ==================== */
+.template-professional .resume-header {
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.template-professional .resume-sidebar {
+    background: #1e3a8a;
+    color: white;
+}
+
+.template-professional .resume-sidebar .section-heading {
+    color: #93c5fd;
+    border-color: #93c5fd;
+}
+
+.template-professional .resume-sidebar .skill-tag {
+    background: rgba(147, 197, 253, 0.2);
+    color: #dbeafe;
+}
+
+.template-professional .resume-main {
+    background: white;
+}
+
+.template-professional .resume-main .section-heading {
+    color: #1e40af;
+    border-color: #1e40af;
+}
+
+/* ==================== TEMPLATE 2: MINIMAL ==================== */
+.template-minimal {
+    background: white;
+}
+
+.template-minimal .resume-header {
+    background: #f9fafb;
+    border-bottom: 3px solid #111827;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.template-minimal .resume-name {
+    color: #111827;
+}
+
+.template-minimal .resume-title {
+    color: #4b5563;
+}
+
+.template-minimal .resume-sidebar {
+    background: #f9fafb;
+    border-right: 1px solid #e5e7eb;
+}
+
+.template-minimal .resume-sidebar .section-heading {
+    color: #111827;
+    border-color: #111827;
+}
+
+.template-minimal .resume-sidebar .skill-tag {
+    background: white;
+    border: 1px solid #d1d5db;
+    color: #374151;
+}
+
+.template-minimal .resume-main .section-heading {
+    color: #111827;
+    border-color: #111827;
+}
+
+/* ==================== TEMPLATE 3: MODERN ==================== */
+.template-modern .resume-header {
+    background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.template-modern .resume-photo {
+    border-color: white;
+}
+
+.template-modern .resume-sidebar {
+    background: #f0fdfa;
+    color: #134e4a;
+}
+
+.template-modern .resume-sidebar .section-heading {
+    color: #0f766e;
+    border-color: #0f766e;
+}
+
+.template-modern .resume-sidebar .skill-tag {
+    background: #ccfbf1;
+    color: #0f766e;
+}
+
+.template-modern .resume-main .section-heading {
+    color: #0f766e;
+    border-color: #0f766e;
+}
+
+/* ==================== COLOR SCHEME OVERRIDES ==================== */
+/* Teal */
+.color-teal .template-professional .resume-header {
+    background: linear-gradient(135deg, #0d9488, #0f766e);
+}
+
+.color-teal .template-professional .resume-sidebar {
+    background: #0f766e;
+}
+
+.color-teal .template-professional .resume-sidebar .section-heading {
+    color: #5eead4;
+    border-color: #5eead4;
+}
+
+.color-teal .template-professional .resume-main .section-heading {
+    color: #0f766e;
+    border-color: #0f766e;
+}
+
+/* Purple */
+.color-purple .template-professional .resume-header {
+    background: linear-gradient(135deg, #7c3aed, #5b21b6);
+}
+
+.color-purple .template-professional .resume-sidebar {
+    background: #5b21b6;
+}
+
+.color-purple .template-professional .resume-sidebar .section-heading {
+    color: #c4b5fd;
+    border-color: #c4b5fd;
+}
+
+.color-purple .template-professional .resume-main .section-heading {
+    color: #7c3aed;
+    border-color: #7c3aed;
+}
+
+/* Red */
+.color-red .template-professional .resume-header {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+.color-red .template-professional .resume-sidebar {
+    background: #b91c1c;
+}
+
+.color-red .template-professional .resume-sidebar .section-heading {
+    color: #fca5a5;
+    border-color: #fca5a5;
+}
+
+.color-red .template-professional .resume-main .section-heading {
+    color: #dc2626;
+    border-color: #dc2626;
+}
+
+/* Gray */
+.color-gray .template-professional .resume-header {
+    background: linear-gradient(135deg, #4b5563, #374151);
+}
+
+.color-gray .template-professional .resume-sidebar {
+    background: #374151;
+}
+
+.color-gray .template-professional .resume-sidebar .section-heading {
+    color: #d1d5db;
+    border-color: #d1d5db;
+}
+
+.color-gray .template-professional .resume-main .section-heading {
+    color: #4b5563;
+    border-color: #4b5563;
+}
+
+/* ==================== PRINT OVERRIDES ==================== */
+@media print {
+    .resume-page {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .resume-sidebar,
+    .resume-main,
+    .resume-header {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
