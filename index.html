@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Generator Pro</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="templates.css">
+
+  <!-- PDF Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+  <!-- App Container -->
+  <div class="app">
+
+    <!-- Editor Panel -->
+    <aside class="editor-panel">
+      <header class="editor-header">
+        <div class="logo-section">
+          <h1 class="logo">Resume<span>Pro</span></h1>
+        </div>
+        <div class="header-buttons">
+          <button id="homeBtn" class="nav-btn">Home</button>
+          <button id="servicesBtn" class="nav-btn">Services</button>
+          <button id="contactBtn" class="nav-btn">Contact Us</button>
+          <button id="darkModeBtn" class="icon-btn" title="Toggle Dark Mode">🌙</button>
+        </div>
+      </header>
+
+      <!-- Popups -->
+      <div id="popupOverlay" class="popup-overlay hidden">
+        <div id="popupContent" class="popup-box">
+          <button id="popupClose" class="popup-close">✕</button>
+          <div id="popupBody"></div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls-bar">
+        <div class="control-group">
+          <label for="templateSelect">Resume Template </label>
+          <select id="templateSelect">
+            <option value="professional">Professional</option>
+            <option value="minimal">Minimal</option>
+            <option value="modern">Modern</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label for="colorScheme">Color</label>
+          <select id="colorScheme">
+            <option value="blue">Blue</option>
+            <option value="teal">Teal</option>
+            <option value="purple">Purple</option>
+            <option value="red">Red</option>
+            <option value="gray">Gray</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Form Sections -->
+      <form id="resumeForm" class="form-sections">
+
+        <!-- Photo Upload -->
+        <section class="form-section">
+          <h2 class="section-title">Photo</h2>
+          <div class="photo-upload">
+            <img id="photoPreview" src="" alt="Photo preview" class="photo-preview hidden">
+            <label for="photoInput" class="upload-label">
+              <span class="upload-icon">📷</span>
+              <span>Upload Photo</span>
+            </label>
+            <input type="file" id="photoInput" accept="image/*" hidden>
+          </div>
+        </section>
+
+        <!-- Personal Info -->
+        <section class="form-section">
+          <h2 class="section-title">Personal Info</h2>
+          <div class="input-row">
+            <input type="text" id="fullName" placeholder="Full Name" class="input">
+            <input type="text" id="title" placeholder="Professional Title" class="input">
+          </div>
+          <div class="input-row">
+            <input type="email" id="email" placeholder="Email" class="input">
+            <input type="tel" id="phone" placeholder="Phone" class="input">
+          </div>
+          <div class="input-row">
+            <input type="text" id="location" placeholder="Location" class="input">
+            <input type="url" id="website" placeholder="Website / LinkedIn" class="input">
+          </div>
+        </section>
+
+        <!-- Summary -->
+        <section class="form-section">
+          <h2 class="section-title">Summary</h2>
+          <textarea id="summary" placeholder="Brief professional summary..." class="textarea" rows="3"></textarea>
+        </section>
+
+        <!-- Skills -->
+        <section class="form-section">
+          <h2 class="section-title">Skills</h2>
+          <textarea id="skills" placeholder="Skill 1, Skill 2, Skill 3..." class="textarea" rows="2"></textarea>
+        </section>
+
+        <!-- Experience -->
+        <section class="form-section">
+          <h2 class="section-title">
+            Experience
+            <button type="button" id="addExpBtn" class="add-btn">+ Add</button>
+          </h2>
+          <div id="experienceList" class="dynamic-list"></div>
+        </section>
+
+        <!-- Education -->
+        <section class="form-section">
+          <h2 class="section-title">
+            Education
+            <button type="button" id="addEduBtn" class="add-btn">+ Add</button>
+          </h2>
+          <div id="educationList" class="dynamic-list"></div>
+        </section>
+
+        <!-- Languages -->
+        <section class="form-section">
+          <h2 class="section-title">Languages</h2>
+          <textarea id="languages" placeholder="English (Native), Spanish (Fluent)..." class="textarea"
+            rows="2"></textarea>
+        </section>
+
+        <!-- Certifications -->
+        <section class="form-section">
+          <h2 class="section-title">Certifications</h2>
+          <textarea id="certifications" placeholder="AWS Certified, PMP..." class="textarea" rows="2"></textarea>
+        </section>
+
+      </form>
+
+      <!-- Action Buttons -->
+      <div class="action-bar">
+        <button id="saveBtn" class="btn btn-secondary">💾 Save</button>
+        <button id="downloadBtn" class="btn btn-primary">📥 Download PDF</button>
+      </div>
+    </aside>
+
+    <!-- Preview Panel -->
+    <main class="preview-panel">
+      <div class="preview-container">
+        <div id="resumePreview" class="resume-page">
+          <!-- Resume content rendered by JS -->
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="templates.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
